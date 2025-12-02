@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varsó</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1e3d58;
+            padding: 15px 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* Mobil menü ikon */
+        .menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-btn div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 4px 0;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(to bottom right, #244f78, #12283a);
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* TARTALOM */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h3 {
+            margin-top: 0;
+            color: #1e3d58;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Mobil nézet */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #1e3d58;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                padding: 10px;
+            }
+
+            .nav-links a {
+                padding: 10px;
+            }
+
+            .menu-btn {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h1>Varsó</h1>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Kezdőlap</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="latnivalok.html">Látnivalók</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Üdvözlünk Varsóban!</h2>
+        <p>Lengyelország vibráló fővárosa, ahol a történelem és a modern élet lenyűgözően találkozik.</p>
+    </section>
+
+    <div class="container">
+
+        <!-- TÖRTÉNELEM -->
+        <div class="section" id="tortenelem">
+            <h3>Varsó történelme</h3>
+            <p>
+                Varsó, Lengyelország fővárosa, az ország kulturális, gazdasági és politikai központja.
+                A város története több mint 700 évre nyúlik vissza. A 16. század óta a lengyel állam
+                egyik legfontosabb városa lett, majd a 17. századtól hivatalosan is fővárosként működött.
+            </p>
+            <p>
+                A második világháború során Varsó Európa egyik legtragikusabb sorsú városa volt.
+                A Németország elleni felkelés és a város ostroma következtében az épületek több mint
+                80%-a elpusztult. A háború után a várost szinte teljes egészében újjá kellett építeni –
+                ez a rekonstrukció a modern Európa egyik legnagyobb városépítészeti projektje volt.
+            </p>
+            <p>
+                Mára Varsó egy modern metropolisz, amely sikeresen ötvözi a régi városrészek történelmi
+                hangulatát a felhőkarcolók és az új városi negyedek XXI. századi világával.
+            </p>
+        </div>
+
+        <!-- LÁTNIVALÓK -->
+        <div class="section" id="latnivalok">
+            <h3>Varsó legfontosabb látnivalói</h3>
+
+            <div class="grid">
+                <div>
+                    <h4>Óváros (Stare Miasto)</h4>
+                    <p>
+                        Varsó szíve, a háború utáni újjáépítés egyik legszebb példája.
+                        UNESCO Világörökségi helyszín, macskaköves utcákkal, hangulatos terekkel
+                        és színes házakkal. Itt található a Királyi Palota is.
+                    </p>
+                </div>
+                <div>
+                    <h4>Kultúra és Tudomány Palotája</h4>
+                    <p>
+                        Lengyelország egyik legmagasabb épülete, amelyet a Szovjetunió építtetett.
+                        Kilátóteraszáról csodás panoráma nyílik a városra.
+                    </p>
+                </div>
+                <div>
+                    <h4>Lazienki Park</h4>
+                    <p>
+                        Európa egyik legszebb városi parkja, hatalmas zöld területekkel, tóval,
+                        pávákkal és a híres Chopin-szoborral.
+                    </p>
+                </div>
+                <div>
+                    <h4>Múzeumok</h4>
+                    <p>
+                        A Varsói Felkelés Múzeuma, a POLIN Zsidó Történeti Múzeum, valamint
+                        a Nemzeti Múzeum fontos történelmi és kulturális gyűjteményeket őriz.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- KULTÚRA -->
+        <div class="section" id="kultura">
+            <h3>Kultúra és élet Varsóban</h3>
+            <p>
+                Varsó kulturális élete rendkívül gazdag. A város számos színháznak, operának,
+                koncertteremnek és művészeti fesztiválnak ad otthont. A klasszikus zenei
+                rendezvények között kiemelkednek a Chopin-emlékkoncertek, amelyek a világhírű
+                lengyel zeneszerző életművét ünneplik.
+            </p>
+            <p>
+                A modern művészet rajongói számára a Praga negyed különösen izgalmas,
+                tele fiatal művészekkel, galériákkal és alternatív kulturális helyszínekkel.
+            </p>
+        </div>
+
+        <!-- KÖZLEKEDÉS -->
+        <div class="section" id="kozlekedes">
+            <h3>Közlekedés Varsóban</h3>
+            <p>
+                Varsó közlekedése jól szervezett és modern. A várost metró, villamos,
+                busz- és gyorsvasúti hálózat köti össze. A két metróvonal gyors és
+                hatékony utazást biztosít a főbb városrészek között.
+            </p>
+            <p>
+                A kerékpáros infrastruktúra egyre fejlettebb, a népszerű Veturilo közbringarendszer
+                pedig könnyen hozzáférhető a lakosok és a turisták számára.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+
+</body>
+</html>
